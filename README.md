@@ -15,6 +15,7 @@ CodeQL environment is provided in docker image [soohoio/planetql](https://hub.do
       - [Example](#example)
     - [By scripts](#by-scripts)
       - [Example](#example-1)
+  - [TroubleShooting](#troubleshooting)
   - [Contributing](#contributing)
 
 ## Usage
@@ -72,6 +73,10 @@ $ scripts/setup.sh sample_project results
 
 $ scripts/analyze.sh results -f --format=csv
 ```
+
+## TroubleShooting
+
+Docker resource should be big enough to create codeql database. If you're stuck in `planetql set`(`codeql database create`) command, Try setting your docker environment to use more memory.
 
 ## Contributing
 
