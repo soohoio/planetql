@@ -29,13 +29,13 @@ RUN wget -q https://github.com/github/codeql-cli-binaries/releases/download/${CO
 
 
 # Clone csharp qlpack and remain only csharp qlpack
-RUN git clone https://github.com/github/codeql ${CODEQL_HOME}/codeql-repo && \
+RUN git clone https://github.com/github/codeql ${CODEQL_HOME}/codeql-repo && \ 
     rm -rf `find ${CODEQL_HOME}/codeql-repo -mindepth 1 -maxdepth 1 -not -path '*/\.*' | grep -v -E 'csharp$' `
 
 ENV PATH="${CODEQL_HOME}/codeql:${PATH}"
 
 # Copy analyze queries
-COPY ql/ /opt/ql/
+COPY queries/ /opt/ql/
 
 # Install planetQL CLI
 RUN npm install -g planetql 
