@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS dotnet_sdk
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS dotnet_sdk
 
 LABEL maintainer="Sooho <angjin@sooho.io>"
 
